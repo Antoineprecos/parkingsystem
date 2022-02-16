@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.util.Date;
 
 public class TicketDAO {
 
@@ -104,6 +105,7 @@ public class TicketDAO {
         }catch (Exception ex){
             logger.error("Error saving ticket info",ex);
         }finally {
+            // fermeture du prepared statement
             dataBaseConfig.closeConnection(con);
         }
         return false;

@@ -45,7 +45,7 @@ public class Ticket {
     }
 
     public Date getInTime() {
-        return inTime;
+        return (inTime != null) ? new Date(inTime.getTime()) : null;
     }
 
     public void setInTime(Date inTime) {
